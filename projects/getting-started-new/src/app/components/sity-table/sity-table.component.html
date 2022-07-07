@@ -1,0 +1,22 @@
+<div *ngFor="let item of citys;let i = index">
+    <table class="table table-bordered">
+        <thead>
+           <td style="margin-left:  40px; "> <h1>{{item.name}}</h1></td>
+        </thead>
+    </table>
+    <table class="table table-bordered">
+        <thead>
+          <th width="50%" height="50%">מס</th>
+          <th width="50%" height="50%">שם</th>
+        </thead>
+        <tbody>
+          <!--a table that givse for each order the order ditels and the  prodact ditels that orderde -->
+          <tr *ngFor="let c of citys[i].customers ;let k = index">
+            <td width="50%" height="50%" ><p class="tdtext">{{c.idNumber}}</p></td>
+            <td width="50%" height="50%"><p class="tdtext"> {{c.firstName}} </p></td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+</div>

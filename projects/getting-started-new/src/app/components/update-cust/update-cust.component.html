@@ -1,0 +1,62 @@
+<nav>
+    <form   [formGroup]="customerFormGroup" >
+      
+        <mat-form-field appearance="outline">
+          <mat-label>שם</mat-label>
+          <input formControlName="firstName" matInput placeholder="שם">
+          <mat-hint style="color: red">חובה</mat-hint>
+        </mat-form-field>
+      
+        <mat-form-field appearance="outline">
+          <mat-label>שם משפחה</mat-label>
+          <input formControlName="lastName" matInput placeholder="Placeholder" >
+          <mat-hint style="color: red">חובה</mat-hint>
+        </mat-form-field>
+     
+        <mat-form-field appearance="outline">
+          <mat-label>טלפון</mat-label>
+          <input formControlName="phone"  matInput placeholder="Placeholder" required >
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>עיר</mat-label>
+        <mat-select formControlName="city">
+          <mat-option *ngFor="let item of $citys  ; let i=index;" value="{{$citys[i]}}">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>כתובת</mat-label>
+        <textarea formControlName="address" matInput></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>מין </mat-label>
+        <mat-select formControlName="sex">
+          <mat-option value="זכר">זכר</mat-option>
+          <mat-option value="נקבה">נקבה</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="example-button-row">
+      </div>
+      <div formArrayName="groups">
+      <mat-form-field [formGroupName]="i" *ngFor="let item of groupsArr; let i=index;"  appearance="fill">
+        <mat-label>קבוצה </mat-label>
+        <mat-select formControlName="groop"  >
+          <mat-option *ngFor="let element of groo; let k=index;"  value="{{groo[k]}}">{{element}}</mat-option>
+        </mat-select>
+        <button (click)="deleteGroop(i)" mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon"><mat-icon>הסר</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>הכנס אימייל</mat-label>
+          <input formControlName="email"  matInput placeholder="pat@example.com" type="email">
+          <mat-error *ngIf= "!customerFormGroup.get('email')?.errors?.['email']">זה לא אימייל</mat-error>
+        </mat-form-field>
+      </div>
+      <button  mat-raised-button color="primary" (click)="setCust()" >העלה לקוח</button>
+      <button mat-raised-button color="primary" [disabled]="customerFormGroup.invalid" (click)="UpdateCust()"> עדכון משתמש</button>
+      <button mat-raised-button color="primary" [disabled]="customerFormGroup.invalid" (click)="delet()"> מחק משתמש</button>
+    </form>
+    </nav>

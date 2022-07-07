@@ -1,0 +1,95 @@
+
+       
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content w3-light-grey" style="max-width:1200px">
+
+
+<!-- Sidebar/menu -->
+<div style="z-index:3;position: relative;box-shadow: 10px 10px 5px grey;" class="big" >
+<nav class="w3-sidebar  w3-bar-block w3-pale-blue w3-collapse w3-top  w3-rightbar" style="z-index:3;" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+
+  </div>
+  <a href="Add" >/הוספת משתמש</a><br/>
+  <a  href="Update">/עדכון ומחיקת משתמש</a><br/>
+  <a href="cityTable"> /טבלת קבוצות</a><br/>
+  <a href="groopTable">/טבלת ערים </a><br/>
+</nav>
+
+</div>
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  
+  <a  class="w3-bar-item w3-button w3-padding-24 w3-right"><i class="fa fa-bars"></i></a>
+</header>
+<!-- Overlay effect when opening sidebar on small screens -->
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-white" style="margin-right:150px;box-shadow: 10px 10px 5px grey;">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge w3-main w3-pale-blue" style="box-shadow: 10px 10px 5px grey;">
+    
+    
+  </header>
+
+  <!-- Image header -->
+  
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p></p>
+  </div>
+
+  
+  <article >
+    
+  <!-- router grid --> 
+  <router-outlet ></router-outlet>
+  <!--if thar in no  router grid --> 
+  
+  
+ </article>
+
+  <!-- Footer -->
+  <footer   class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <a href="Add" >/הוספת משתמש</a>
+  <a  href="Update">/עדכון ומחיקת משתמש</a>
+  <a href="cityTable"> /טבלת קבוצות</a>
+  <a href="groopTable">/טבלת ערים </a>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">ShiloShops</a></div>
+</div>
+  
+
+  <!-- End page content -->
+
+</body>
+
+</html>

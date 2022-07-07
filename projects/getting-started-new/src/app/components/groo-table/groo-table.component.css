@@ -1,0 +1,22 @@
+table {
+    width: 20%;
+    margin-left:  35%; 
+  }
+  .tdtext{
+    margin-top:50%;
+}
+.pos{
+    left: 36%;  
+  }
+  .h1,p{
+    
+    margin-bottom:65%;
+  }
+  table, td {
+    border: 1px solid black;
+  }
+@media screen and (max-width: 767px) {
+     .pos{
+    left: 40%;  
+  }
+}
